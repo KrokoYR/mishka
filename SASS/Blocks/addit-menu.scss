@@ -1,0 +1,36 @@
+.addit-menu__item{
+	@include list-style-reset;
+}
+
+@media (min-width: $tablet-width) {
+	.addit-menu__list{
+		display: none;
+		padding: 0;
+	}
+
+	.addit-menu__delivery-info{
+		align-self: flex-end;
+
+		font-family: 'Open-Sans';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 24px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.addit-menu__list{
+		width: auto;
+		display: flex;
+		padding-left: 50px;
+	}
+
+	.addit-menu__list .addit-menu__item:nth-child(2){
+		margin-left: 60px;
+	}
+
+	.addit-menu__list a{
+		font-size: 15px;
+	}
+}

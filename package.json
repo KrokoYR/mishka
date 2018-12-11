@@ -1,0 +1,16 @@
+{
+  "name": "mishka",
+  "version": "1.0.0",
+  "description": "website(student's maket)",
+  "main": "\t\t\t\t",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "\t\t\t\t"
+  },
+  "keywords": [
+    "website(personal)"
+  ],
+  "author": "Lopson Balzhinimaev (personal project)",
+  "license": "ISC"
+}

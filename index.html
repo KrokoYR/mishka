@@ -3,49 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mishka</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="container">
+	<div style="display:none">
+      <include src="img/sprite.svg"></include>
+    </div>
 	<header class="page-header">
 		<h2 class="visually-hidden">Основная навигация</h2>
-		<div class="page-header__top-menu top-menu">
-			<nav class="page-header__wrapper top-menu__wrapper nav">
-				<a class="page-header__logo" href="#">
-					<svg class="page-header__logo-mobile" width="100%" height="100%"></svg>
-					<svg class="page-header__logo-tablet" width="100%" height="100%"></svg>
-					<svg class="page-header__logo-desktop" width="100%" height="100%"></svg>
-				</a>
-				<ul class="top-menu__list">
-					<li class="page-header__item top-menu__item">
-						<a href="catalog.html"></a>
+		<div class="page-header__main-menu main-menu">
+			<a class="page-header__logo" href="#">
+					<img src="img/logo-mobile.svg" class="page-header__logo-mobile" alt="logo-mobile" width="86" height="35"> 
+					<img src="img/logo-tablet.svg" class="page-header__logo-tablet" alt="logo-tablet" width="113" height="46">
+					<img src="img/logo-desktop.svg" class="page-header__logo-desktop" alt="logo-desktop" width="149" height="72">
+			</a>
+			<button class="page-header__toggle page-header__toggle--closed" type="button">
+				<!-- <svg width="100%" height="100%">
+					<use xlink:hred="img/page-header__toggle.svg"></use>
+				</svg> -->
+				Открыть меню
+			</button>
+			<nav class="main-menu__nav">
+				<ul class="main-menu__list">
+					<li class="page-header__item main-menu__item">
+						<a href="catalog.html">Каталог товаров</a>
 					</li>
-					<li class="page-header__item top-menu__item">
-						<a href="crochet.html"></a>
+					<li class="page-header__item main-menu__item">
+						<a href="crochet.html">Вязание на заказ</a>
 					</li>
 				</ul>
 			</nav>
-			<div class="page-header__user-menu top-menu__user-menu">
-				<ul class="top-menu__list">
-					<li class="page-header__item top-menu__item top-menu__item--search">
-						<a class="top-menu_search" href="#">Поиск по сайту
-							<svg class="top-nav__search-icon" width="20" height="20"></svg>
-						</a>
+			<div class="main-menu__user-menu">
+				<ul class="main-menu__list">
+					<li class="page-header__item main-menu__item main-menu__item--search">
+						<a class="main-menu_search" href="#">Поиск по сайту</a>
 					</li>
-					<li class="page-header__item top-menu__item top-menu__item--basket">
-						<a class="user-menu__search" href="#">Корзина:пока пуста
-							<svg class="top-menu__basket-icon" width="20" height="20"></svg>
-						</a>
+					<li class="page-header__item main-menu__item main-menu__item--basket">
+						<a class="main-menu__search" href="#">Корзина:пока пуста</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="page-header__down-menu down-menu">
-			<nav class="down-menu__wrapper">
-				<ul class="down-menu__list">
-					<li class="page-header__item down-menu__item">
-						<a href="new.html"></a>
+		<div class="page-header__addit-menu addit-menu">
+			<nav class="addit-menu__wrapper">
+				<ul class="addit-menu__list">
+					<li class="page-header__item addit-menu__item">
+						<a href="new.html">Новые поступления</a>
 					</li>
-					<li class="page-header__item down-menu__item">
-						<a href="sale.html"></a>
+					<li class="page-header__item addit-menu__item">
+						<a href="sale.html">Распродажа</a>
 					</li>
 				</ul>
 			</nav>
@@ -54,38 +61,42 @@
 	</header>
 	<main class="page-main">
 		<section class="products">
-			<div class="products-wrapper">
-				<h1>Милые штуки ручной<br> работы для дома</h1>
-				<div class="products__categories">
-					<a class="products__interior" href="#">
+			<div class="products__wrapper">
+				<h1 class="products__title">Милые штуки ручной<br> работы для дома</h1>
+				<ul class="products__categories">
+					<li class="products__item products__item-interior">
+						<a href="#">
 						<p>Предметы интерьера</p>
-						<svg class="products__interior-icon"></svg>
-					</a> 
-					<a class="products__toys" href="">
+						</a> 
+					</li>
+					<li class="products__item products__item-toys">
+						<a href="">
 						<p>Детские игрушки</p>
-						<svg class="products__toys-icon"></svg>
-					</a>
-				</div>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section class="weekly-product">
 			<div class="weekly-product__wrapper">
 				<header class="weekly-product__title">
-					<h2 class="weekly-product__name">Вязанные корзинки</h2>
-					<p class="weekly-product-legend">Товар недели</p>
+					<h2 class="weekly-product__title-name">Вязанные корзинки</h2>
+					<p class="weekly-product__title-legend">Товар недели</p>
 				</header>
 				<div class="weekly-product__info">
-					<p class="weekly-product__decription"></p>
+					<p class="weekly-product__description">
+						Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+					</p>
 					<table class="weekly-product__parameters">
-						<tr class="weekly-prodict__table-row">
+						<tr class="weekly-product__table-row">
 							<td>Цвет:</td>
 							<td>Тиффани/серый</td>
 						</tr>
-						<tr class="weekly-prodict__table-row">
+						<tr class="weekly-product__table-row">
 							<td>Диаметр:</td>
 							<td>25 см</td>
 						</tr>
-						<tr class="weekly-prodict__table-row">
+						<tr class="weekly-product__table-row">
 							<td>Высота:</td>
 							<td>15 см</td>
 						</tr>
@@ -101,27 +112,27 @@
 			<h3 class="about__title">Коротко о нас:</h3>
 			<ul class="about__list">
 				<li class="about__item about__item--clean">
-					<svg class="about__item-" width="" height=""></svg>
+					<!-- <svg class="about__item-" width="" height=""></svg> -->
 					<p>Экологически чистые материалы</p>
 				</li>
 				<li class="about__item about__item--cheap">
-					<svg class="about__item-" width="" height=""></svg>
+					<!-- <svg class="about__item-" width="" height=""></svg> -->
 					<p>Скандинавский стиль по российской цене</p>
 				</li>
 				<li class="about__item about__item--popular">
-					<svg class="about__item-" width="" height=""></svg>
+					<!-- <svg class="about__item-" width="" height=""></svg> -->
 					<p>Увеличивает лайки на фотографиях</p>
 				</li>
 				<li class="about__item about__item--handmake">
-					<svg class="about__item-" width="" height=""></svg>
+					<!-- <svg class="about__item-" width="" height=""></svg> -->
 					<p>Связано вручную с любовью и умилением</p>
 				</li>
 				<li class="about__item about__item--support">
-					<svg class="about__item-" width="" height=""></svg>
+					<!-- <svg class="about__item-" width="" height=""></svg> -->
 					<p>Поддержка отечественного производителя</p>
 				</li>
 				<li class="about__item about__item--delivery">
-					<svg class="about__item-" width="" height=""></svg>
+					<!-- <svg class="about__item-" width="" height=""></svg> -->
 					<p>Поставляется в подарочной упаковке</p>
 				</li>
 			</ul>
@@ -139,15 +150,15 @@
 				</div>
 				<div class="feedbacks__scroll">
 					<button class="comments__left" type="button">
-	              <svg width="50" height="26">
+	              <!-- <svg width="50" height="26">
 	                <use xlink:href="#icon-left-arrow"></use>
-	              </svg>
+	              </svg> -->
 	              Предыдущий
 	            </button>
 	            <button class="comments__right" type="button">
-	              <svg width="50" height="26">
+	              <!-- <svg width="50" height="26">
 	                <use xlink:href="#icon-right-arrow"></use>
-	              </svg>
+	              </svg> -->
 	              Следующий
 	            </button>
 				</div>
@@ -156,10 +167,56 @@
 		</section>
 		<section class="contacts">
 			<div class="contacts__wrapper">
-				<h3 class="contacts__title"></h3>
+				<h3 class="contacts__title">Контакты</h3>
+				<div class="contacts__email">
+					<p class="contacts__legend">e-mail:</p>
+					<p class="contacts__email-name">info@mimimishkashop.ru</p>
+				</div>
+				<div class="contacts__adress">
+					<p class="contacts-legend">Адрес:</p>
+					<p class="contacts__adress-name">г. Санкт-Петербург ул. Большая Конюшенная, д. 19/8, офис 101</p>
+				</div>
+				<div class="contacts__map">
+					<iframe src="" style="border:0;" allowfulscreen></iframe>
+				</div>
+				<a href="#" class="contacts__button button"></a>
 			</div>
 		</section>
 	</main>
+	<footer class="page-footer">
+		<div class="page-footer__wrapper">
+			<a href="#" class="page-footer_logo">
+				<!-- <svg class="page-footer__logo-mobile" width="100%" height="100%"></svg>
+				<svg class="page-footer__logo-tablet" width="100%" height="100%"></svg>
+				<svg class="page-footer__logo-desktop" width="100%" height="100%"></svg> -->
+			</a>
+			<div class="page-footer__social">
+				<h3 class="visually-hidden">Мы в социальных сетях</h3>
+				<ul class="page-footer__list">
+					<li class="page-footer__social-insta"><a href="#">Интсаграм</a></li>
+					<li class="page-footer__social-Fb"><a href="#">Фэйсбук</a></li>
+					<li class="page-footer__social-Vk"><a href="#">Вконтакте</a></li>
+				</ul>
+			</div>
+			<div class="page-footer__credits">
+				<h3 class="page-footer__credits-title">Разработано</h3>
+				<a class="page-footer__credite-link" href="#"><svg class="page-footer__html-academy"></svg></a>
+			</div>
+		</div>
+	</footer>
+	<div class="modal-menu modal-menu--hidden">
+		<h2 class="modal-menu__title">Добавить в корзину</h2>
+		<p class="modal-menu__call-to-choose">Выберите размер</p>
+		<div class="modal-menu_choose-size choose-size">
+			<a class="choose-size__item" href="#">S</a>
+			<a class="choose-size__item" href="#">M</a>
+			<a class="choose-size__item" href="#">L</a>
+		</div>
+		<button class="modal-menu__button button">Добавить</button>
+	</div>
+	<div class="modal-background modal-backround--hidden">
+		фон
+	</div>
 </body>
 </html>
 
