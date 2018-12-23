@@ -1,0 +1,39 @@
+.page-footer {
+  padding-top: 24px;
+  padding-bottom: 23px;
+  background-color: #f1f1f1;
+}
+
+.page-footer__logo {
+  display: none;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .page-footer__wrapper > * {
+    width: 182px;
+  }
+
+  .page-footer {
+    padding: 53px 0;
+    padding-bottom: 51px;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    display: block;
+
+    & svg:hover {
+      fill: $main-color;
+    }
+
+    & svg:active {
+      opacity: 0.3;
+    }
+  }
+}

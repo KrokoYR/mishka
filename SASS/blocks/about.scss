@@ -1,0 +1,178 @@
+.about {
+  padding-top: 29px;
+}
+
+.about__title {
+  @include mobile-secondary-title;
+  margin-bottom: 23px;
+}
+
+.about__list {
+  @include list-style-reset;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.about__item {
+  position: relative;
+  padding-top: 45px;
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--clean p {
+    width: 190px;
+  }
+
+  &--cheap p {
+    width: 200px;
+  }
+
+  &--popular p {
+    width: 190px;
+  }
+
+  &--cute p {
+    width: 210px;
+  }
+
+  &--patriotic p {
+    width: 250px;
+  }
+
+  &--gift p {
+    width: 200px;
+  }
+
+  svg {
+    position: absolute;
+    fill: $main-color;
+  }
+
+  &--clean svg {
+    top: 7px;
+    left: 7px;
+  }
+
+  &--cheap svg {
+    top: 10px;
+  }
+
+  &--popular svg {
+    top: 15px;
+    left: 7px;
+  }
+
+  &--cute svg {
+    top: 10px;
+    left: 2px;
+  }
+
+  &--patriotic svg {
+    top: 10px;
+    left: -5px;
+  }
+
+  &--gift svg {
+    top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding-top: 50px;
+  }
+
+  .about__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .about__title {
+    margin-left: -5px;
+    margin-bottom: 40px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about__item {
+    flex-basis: 50%;
+    margin-bottom: 25px;
+
+    &--clean {
+      order: 0;
+    }
+
+    &--cheap {
+      order: 2;
+    }
+
+    &--popular {
+      order: 4;
+    }
+
+    &--cute {
+      order: 1;
+    }
+
+    &--patriotic {
+      order: 3;
+    }
+
+    &--gift {
+      order: 5;
+    }
+
+    &--clean p {
+      width: 210px;
+    }
+
+    &--cheap p {
+      width: 240px;
+    }
+
+    &--popular p {
+      width: 220px;
+    }
+
+    &--cute p {
+      width: 250px;
+    }
+
+    &--patriotic p {
+      width: 300px;
+    }
+
+    &--gift p {
+      width: 250px;
+    }
+  }
+}
+
+
+@media (min-width: 1150px) {
+  .about {
+    padding-top: 65px;
+  }
+
+  .about__item {
+    flex-basis: 350px;
+  }
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 172px;
+  }
+
+  .about__list {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+}

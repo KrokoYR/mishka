@@ -1,0 +1,423 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  color: $main-color;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    width: 77%;
+    height: 1px;
+    background-color: $main-color;
+  }
+
+  &[for="order-form__email"]::after {
+    width: 69%;
+  }
+}
+
+.order-form__contacts {
+  .order-form__wrapper {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .order-form__wrapper:last-child {
+    margin-bottom: 0;
+  }
+
+  .order-form__title {
+    margin-bottom: 20px;
+  }
+}
+
+.order-form__inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form input[type="radio"]:checked + label::after {
+  box-shadow: 0 0 0 10px #ffffff inset, 0 0 0 20px $main-color inset;
+}
+
+.order-form input[type="checkbox"]:checked + label::after {
+  background: url("../img/icon-tick.svg") no-repeat center center;
+  background-size: 25px 25px;
+}
+
+.order-form input[type="checkbox"],
+.order-form input[type="radio"] {
+  display: none;
+}
+
+.order-form__type label,
+.order-form__color label {
+  position: relative;
+  padding: 8px 0;
+  padding-left: 60px;
+  cursor: pointer;
+}
+
+.order-form__color label {
+  padding: 11px 0;
+  padding-left: 60px;
+  margin-bottom: 21px;
+}
+
+.order-form__color label:last-child,
+.order-form__bio label:last-child {
+  margin-bottom: 0;
+}
+
+.order-form__color label::after {
+  @include pseudo-element(36px, 35px, -2px, 0);
+  border: 2px solid black;
+}
+
+.order-form__color label:hover::after,
+.order-form__type label:hover::after {
+  border-color: $main-color;
+}
+
+.order-form__color label:active::after,
+.order-form__type label:active::after {
+  border-color: #c7c7c7;
+}
+
+.order-form__type label::after {
+  @include pseudo-element(35px, 35px, 0, 0);
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.order-form__text-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 15px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $text-color;
+  background-color: transparent;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-bottom-color: $main-color;
+  }
+}
+
+.order-form__additional {
+  box-sizing: border-box;
+  padding: 14px 17px;
+  width: 100%;
+  min-height: 143px;
+  margin-bottom: 6px;
+  border: 2px solid #000000;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $text-color;
+  resize: none;
+  outline: none;
+
+  &:hover {
+    border-color: $main-color;
+  }
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    border-color: $main-color;
+  }
+}
+
+.order-form__sidetext {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: $text-color;
+}
+
+.order-form__email,
+.order-form__phone {
+  position: relative;
+  box-sizing: border-box;
+  padding-right: 44px;
+}
+
+.order-form__phone-icon {
+  position: absolute;
+  right: 8px;
+  bottom: 18px;
+  opacity: 0.2;
+}
+
+.order-form__email-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  opacity: 0.2;
+}
+
+.order-form__email:focus + .order-form__email-icon,
+.order-form__email:hover + .order-form__email-icon,
+.order-form__phone:focus + .order-form__phone-icon,
+.order-form__phone:hover + .order-form__phone-icon {
+  fill: $main-color;
+  opacity: 1;
+}
+
+.order-form__wishes {
+  .order-form__wrapper {
+    margin-top: 30px;
+  }
+}
+
+.order-form__submit {
+  width: 100%;
+  line-height: 17px;
+}
+
+label[for="order-form__accessories"] {
+  margin-bottom: 5px;
+}
+
+.order-form__bio {
+  label {
+    margin-bottom: 24px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .order-form__type label::after {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+
+  .order-form__color label::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  label[for="order-form__accessories"] {
+    margin-bottom: 33px;
+  }
+
+  .order-form input[type="radio"]:checked + label::after {
+    box-shadow: 0 0 0 13px #ffffff inset, 0 0 0 25px $main-color inset;
+  }
+
+  .order-form input[type="checkbox"]:checked + label::after {
+    background: url("../img/icon-tick.svg") no-repeat center center;
+    background-size: 32px 32px;
+  }
+
+  .order-form__color label,
+  .order-form__color label:last-child {
+    margin-bottom: 33px;
+  }
+
+  .order-form__type label,
+  .order-form__color label {
+    padding-top: 13px;
+    padding-left: 81px;
+  }
+
+  .order-form__title {
+    width: 167px;
+    margin-top: 12px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .order-form__inputs {
+    width: 505px;
+  }
+
+  .order-form__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .order-form__color {
+    padding: 52px 0;
+    background-color: #f1f1f1;
+
+    .order-form__inputs {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    label {
+      box-sizing: border-box;
+      flex-basis: 240px;
+    }
+  }
+
+  .form__intro-text {
+    margin-bottom: 60px;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .order-form__bio {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .order-form__contacts {
+    padding-top: 59px;
+    padding-bottom: 48px;
+    background-color: #f1f1f1;
+
+    input {
+      width: 501px;
+    }
+
+    .order-form__wrapper {
+      margin-bottom: 30px;
+    }
+
+    .order-form__title {
+      margin-top: 7px;
+    }
+  }
+
+  .order-form__additional {
+    width: 501px;
+    font-size: 19px;
+    line-height: 19px;
+  }
+
+  .order-form__wishes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+
+    .order-form__wrapper {
+      margin-top: 15px;
+      margin-bottom: 46px;
+    }
+  }
+
+  .order-form__sidetext {
+    margin-bottom: 0;
+    order: 1;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__submit {
+    width: 231px;
+    padding: 15px 0;
+    font-size: 17px;
+  }
+
+  .order-form__bio,
+  .order-form__contacts {
+    .order-form__text-input {
+      padding-left: 17px;
+    }
+
+    input {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  .order-form__phone-icon {
+    bottom: 18px;
+    right: 25px;
+  }
+
+  .order-form__email-icon {
+    bottom: 10px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .order-form__inputs,
+  .order-form__additional {
+    width: 700px;
+  }
+
+  .order-form__color {
+    .order-form__inputs {
+      width: 875px;
+      justify-content: flex-start;
+    }
+
+    label {
+      flex-basis: 30%;
+    }
+  }
+
+  .order-form__contacts {
+    input {
+      width: 700px;
+    }
+  }
+
+  .order-form__title {
+    width: 175px;
+    box-sizing: border-box;
+    padding-left: 60px;
+  }
+
+  .order-form__submit {
+    margin-left: 175px;
+  }
+
+  .order-form__sidetext {
+    margin-right: 175px;
+  }
+
+  .order-form__wishes {
+    label {
+      margin-top: 18px;
+    }
+
+    .order-form__wrapper {
+      margin-bottom: 43px;
+    }
+  }
+
+  .order-form__phone-icon {
+    right: 17%;
+  }
+
+  .order-form__email-icon {
+    right: 17%;
+  }
+}

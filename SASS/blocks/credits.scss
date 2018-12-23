@@ -1,0 +1,48 @@
+.credits {
+  margin-top: 42px;
+  font-size: 0;
+  text-align: center;
+
+  * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.credits__title {
+  margin: 0;
+  margin-right: 25px;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: bold;
+}
+
+.credits__link {
+  margin-top: 5px;
+  font-size: 0;
+  width: 33px;
+  height: 39px;
+
+  svg {
+    fill: $main-color;
+  }
+}
+
+@media (min-width: 768px) {
+  .credits__title {
+    margin-right: 21px;
+  }
+
+  .credits {
+    margin-top: 0;
+  }
+
+  .credits__link {
+    width: 33px;
+    height: 39px;
+  }
+}
