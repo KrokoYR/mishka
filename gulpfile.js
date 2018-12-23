@@ -22,7 +22,7 @@ gulp.task('uglify', function (cb) {
   pump([
         gulp.src('js/main.js'),
         uglifyjs(),
-        gulp.dest('build/js')
+        gulp.dest('../mishka/')
     ],
     cb
   );
@@ -33,7 +33,7 @@ gulp.task('html', function() {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('../mishka/'))
     .pipe(server.stream());
 })
 
@@ -43,7 +43,7 @@ gulp.task('sprite', function() {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('img/'));
 })
 
 gulp.task('images', function() {
@@ -53,13 +53,13 @@ gulp.task('images', function() {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('img/'));
 });
 
 gulp.task('webp', function() {
-  return gulp.src('img/**/*.{jpg,png}')
+  return gulp.src('img/*.{jpg,png}')
     .pipe(imageminWebp({quality: 90}))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('img/'));
 });
 
 gulp.task('style', function() {
@@ -69,16 +69,16 @@ gulp.task('style', function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest('227974-mishka-master/css'))
+    .pipe(gulp.dest('/css'))
     .pipe(minify())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('227974-mishka-master/css'))
+    .pipe(gulp.dest('/css'))
     .pipe(server.stream());
 });
 
 gulp.task('serve', function() {
   server.init({
-    server: 'build/',
+    server: '../mishka/',
     notify: false,
     open: true,
     cors: true,
@@ -100,7 +100,7 @@ gulp.task('copy', function() {
   ], {
     base: '.'
   })
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('../mishka/'));
 });
 
 gulp.task('clean', function() {
